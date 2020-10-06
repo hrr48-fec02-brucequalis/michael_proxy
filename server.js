@@ -5,12 +5,12 @@ app.use(express.json());
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/proxy', proxy({ target: 'http://localhost:8081', changeorigin: true}));
+app.use('/proxy', proxy({ target: 'http://localhost:3000', changeorigin: true}));
 
 app.get('/', (req, res) => {
   res.send("Gotta Catch 'Em All ")
 })
 
-app.listen(8081, () => {
-  console.log('Proxy Server is listening on port 8081...')
+app.listen(3000, () => {
+  console.log('Proxy Server is listening on port 3000...')
 })
