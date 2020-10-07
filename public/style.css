@@ -1,3 +1,8 @@
-@import 'http://localhost:3001/style.css'
+@import 'http://localhost:3001/style.css';
+
+@import 'http://localhost:3004/style.css';
 
 
+.carousel-options-container {
+  display: flex;
+}
