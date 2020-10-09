@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "deploy": "aws s3 sync build/ s3://target-image-carousel"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.1.0",
     "http-proxy-middleware": "^1.0.5"
   }
 }
