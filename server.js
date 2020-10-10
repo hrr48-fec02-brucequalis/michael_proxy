@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.send("Gotta Catch 'Em All ")
 })
 
+app.get('/:product', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html');
+})
+
 app.listen(3000, () => {
   console.log('Proxy Server is listening on port 3000...')
 })
